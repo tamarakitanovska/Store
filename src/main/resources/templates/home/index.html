@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Corporate website</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/my-company.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <title>Spring Boot - POST-GET AJAX Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</head>
+
+<body>
+
+<header th:insert="fragments/header.html :: header"> </header>
+
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Welcome to my company's website
+            </h1>
+            <h3>Informations about our collaborators</h3>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Rolex</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Rolex SA (/ˈroʊlɛks/) is a Swiss luxury watchmaker. The company and its subsidiary Montres Tudor SA design, manufacture, distribute and service wristwatches sold under the Rolex and Tudor brands. Founded by Hans Wilsdorf and Alfred Davis in London, England in 1905 as Wilsdorf and Davis, Rolex moved its base of operations to Geneva, Switzerland in 1919</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-gift"></i>Harry Winston</h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Harry Winston, Inc. is an American luxury jeweler and producer of Swiss timepieces. Named after its founder, the jeweler Harry Winston, the company has its headquarters in New York City.
+                        Harry Winston is a wholly owned subsidiary of The Swatch Group, which acquired it from the Toronto based Harry Winston Diamond Corporation in January 2013
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-compass"></i>Cartier</h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Société Cartier (/ˈkɑːrtieɪ/; French: [kaʁtje]) is a French luxury goods conglomerate company which designs, manufactures, distributes, and sells jewellery and watches.
+
+                        Founded in Paris, France, in 1847 by Louis-François Cartier, the company remained under family control until 1964. The company maintains its headquarters in Paris, although it is a wholly owned subsidiary of the Compagnie Financière Richemont SA in Switzerland.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- Portfolio Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Portfolio Heading</h2>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfBA5JpzZvX5r0DMVwxc-XYmMuwEhqg2DV_hWGzkl0n7FKTav0" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTJtDhvqHF0ujdgqhTSaqSUueUsYH2cCniV_TnVeCdzkB6TOEq" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTciwGEcVPlnFN41jTuTxrnVLz4YtbmMJt-8VR8zgywfkwe3HJx" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY5hKuNQiYbc-oVHfdIjsumbZIElyUq8iXsL68VVIBG4aoLe47" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnfPoFdL6O_3rFLyWW1xJxAyT8Hnlo37OpoepfaIqRPV1QQQdX" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="#">
+                <img class="img-responsive img-portfolio img-hover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuv9ecqBWD-vn2dc98bdyMUCX6vUXRzTGnVj2hzF_bQKtiOSv3zg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="well">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>View more products!</h3>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-default btn-block" href="/products">Products</a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+
+</div>
+
+<div class="container body-content">
+    <hr />
+    <footer>
+        <p>&copy; 2018 - T&L Store</p>
+    </footer>
+</div>
+<!-- /.container -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

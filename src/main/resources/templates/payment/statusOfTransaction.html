@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Create New Task</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.css"/>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.js"></script>
+    </head>
+</head>
+<header th:insert="fragments/header.html :: header"> </header>
+<body>
+<div class="well container" th:switch="${balance}">
+    <p th:case="'0'">There are not any bitcoins sent <br/>
+        Please sent the requested amount to the folowing address to complete the payment <br/>
+        Address: <label th:text="${addressForCustomer.address}"></label></p>
+    <p th:case="*">Your payment is confirmed the products will be shiped as soon as possible</p>
+</div>
+</body>
+</html>

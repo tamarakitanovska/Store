@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.css"/>
+    <script src="/webjars/bootstrap/3.3.7/js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container-fluid" style="margin-top: 10%;">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 well">
+            <h3 class="text-center">Login</h3>
+            <hr/>
+            <form th:action="@{/login}" method="post" class="form-container">
+                <h4 class="text-center text-danger" th:text="${loginError}"></h4>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" required class="form-control" id="username" placeholder="Enter username" name="username"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" required minlength="6" class="form-control" id="password" placeholder="Enter password" name="password"/>
+                </div>
+                <p class="text-center">
+                    <button type="submit" class="btn btn-success" style="border-radius: 50px; padding: 8px 20px 8px 20px;">Login</button>
+                    <a href="/register" role="button" class="btn btn-primary" style="border-radius: 50px; padding: 8px 20px 8px 20px; margin-left: 2em;">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

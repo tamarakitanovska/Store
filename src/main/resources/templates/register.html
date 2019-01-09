@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.css"/>
+    <script src="/webjars/bootstrap/3.3.7/js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 well" style="margin-top: 2%;">
+            <h4 class="text-center">Register</h4>
+            <hr/>
+            <form action="/register" th:object="${user}" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter username" required class="form-control" th:field="*{username}" name="username"/>
+                    <p class="text-danger" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter password" required class="form-control" th:field="*{password}" name="password"/>
+                    <p class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required class="form-control" name="confirmPassword"/>
+                    <p class="text-danger" th:text="${passwordNotMatching}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter Email" required class="form-control" th:field="*{email}" name="email"/>
+                    <p class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" placeholder="Enter First Name" required class="form-control" th:field="*{firstName}" name="firstName"/>
+                    <p class="text-danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" placeholder="Enter Last Name" required class="form-control" th:field="*{lastName}" name="lastName"/>
+                    <p class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+                </div>
+                <p class="text-center">
+                    <button class="btn btn-success" style="border-radius: 50px; padding: 8px 20px 8px 20px;">Register</button>
+                    <a href="/" class="btn btn-default" role="button" style="border-radius: 50px; padding: 8px 20px 8px 20px; margin-left: 2em;">Back</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
