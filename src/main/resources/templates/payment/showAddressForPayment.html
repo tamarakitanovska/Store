@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Create New Task</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.css"/>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.js"></script>
+    </head>
+</head>
+<body>
+<header th:insert="fragments/header.html :: header"> </header>
+
+<div class="well container">
+    <p>The amount for paying is <label th:text="${priceInBitcoin}"></label> bitcoin</p>
+<p>Sent bitcoin to the address <b>BELOW</b></p>
+<h4 th:text="${addressForCustomer.address}" class="text-primary row-md-1"></h4>
+    <br/>
+    <br/>
+<p>After 3 block confirmations (aproximately 30 minutes) your order will be shipped</p>
+    <p>You can check the status of your transaction here </p>
+    <a href="#" th:href="@{/payment/getStatus/}" class="btn btn-primary">Status</a>
+    <br/>
+    <br/>
+    </div>
+</body>
+</html>
